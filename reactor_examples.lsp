@@ -1,5 +1,3 @@
-
-
 (vl-load-com)
 ;; Mouse reactor
 (vlr-remove-all :vlr-mouse-reactor)
