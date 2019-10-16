@@ -28,12 +28,11 @@
         (alert "Se ha cambiando el tamano de la ventana")
         )
 )
+;;Document reactor 
+(vlr-remove-all :(vlr-wblock-reactor)
 
-
-(vlr-remove-all :vlr-editor-reactor)
-(vlr-editor-reactor "Name command" '( (:vlr-commandWillStart . newDraw   )))
+((vlr-wblock-reactor "Block " '( (:vlr-VLR-endWblock . newDraw   )))
 
 (defun newDraw ( calling-reactor commandInf )
-    ;; (print commandInf)
-    (alert (strcat "Soy el comando: "  (car commandInf)  ) )
+    (alert "Se ha creado un nuevo documento")
 )
